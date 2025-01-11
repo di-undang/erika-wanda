@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/love.ico">
+    <!--===============BOXICONS===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--=============== AOS CDn ===============-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles_black.css">
+    <link rel="stylesheet" href="assets/css/img-galery.css">
+
+    <title>Arif & Ikke | Invitations</title>
+</head>
+
+<body>
+    <audio id="myMusic" src="assets/audio/Beautiful_In_White.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Beranda</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#info" class="nav__link">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#lokasi" class="nav__link">
+                            <i class='bx bx-calendar-heart nav__icon'></i>
+                            <span class="nav__name">Acara</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#galeri" class="nav__link">
+                            <i class='bx bx-image nav__icon'></i>
+                            <span class="nav__name">Galeri</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#ucapan" class="nav__link">
+                            <i class='bx bx-message nav__icon'></i>
+                            <span class="nav__name">Ucapan</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="btn_full_screen">
+            <a onclick="setFulllscreenMode()">
+                <i id="icon-screen" class='bx bx-fullscreen'></i>
+            </a>
+        </div>
+        <div class="btn_play">
+            <a onclick="OnOffMusic();">
+                <i id="icon-sound" class='bx bx-pause'></i>
+            </a>
+        </div>
+    </header>
+
+    <!--=============== Opening Cover ===============-->
+
+    <section id="cover">
+        <div class="rows">
+            <div class="sampul">
+                <div class="sampul-bgtrans">
+                    <div class="container">
+
+                        <div class="col-12 align-self-center">
+                            <h5 class="text-center text-white">- Wedding Invitations -</h5>
+                            <div class="col-sm-12 align-self-center">
+                                <h2 class=" text-white ">Maulana & Ikke</h2>
+                            </div>
+                            <div class="col-sm-12 text-center text-white">
+                                <h6><b>Kamis 13 Juli 2023</b></h6>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <button id="btnCover" href="#home" class="btn-sampul" onclick="openUdangan()">
+                                    <i class="bx bx-envelope-open"></i> Buka
+                                    Undangan</button>
+                            </div>
+                            <div class="col-sm-12 text-center mt-2 text-white">
+                                <h6>Kepada Yth. Bapak/Ibu/Saudara/i :</h6>
+                                <hr>
+                                <p class="text-center" id="nama_undangan"><b>TAMU UNDANGAN</b></p>
+                                <hr>
+                                <h6 style="font-size: 14px;">Mohon Maaf Apabila ada kesalahan dalam
+                                    penulisan, Nama dan Gelar</>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="maintext">
+
+        <!--=============== HOME ===============-->
+        <section id="home">
+            <div class="border-top-bottom">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-content">
+                            <h5 class=" txt_titel text-center "> The Wedding Of </h5>
+
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-8">
+                                    <h1 class="text-center txt_nama1">M</h1>
+                                    <h2 class="col-12 text-center txt_dan">&</h2>
+                                    <h1 class="text-center txt_nama1">I</h1>
+                                    <h5 class=" txt_titel text-center "> Kamis , 13 Juli 2023 </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== info===============-->
+        <section id="info">
+            <div class="">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-content">
+                            <div class="col-md-12">
+                                <h5 class="text-center text-white  mt-5"><b>Assalamu’alaikum Wr. Wb.</b></h5>
+                                <div class=" card-panel mt-5" data-aos="fade-up">
+                                    <div class="border-left-right">
+
+                                    </div>
+                                    <div class="row  justify-content-center">
+                                        <div class="col-sm-12">
+                                            <p class="text-center text-white">
+                                                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah
+                                                kami akan
+                                                menyelenggarakan acara pernikahan :</p>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-12 align-self-center">
+                                            <h1 class="txt_nama2">Maulana Syarief Hidayat</h1>
+                                            <p class="text-center text-white">Putra dari Bpk. Suyatno & Ibu Anye
+                                                Mardiana
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-12 align-self-center ">
+                                            <p class=" icon_haeart text-white text-center">-<i class='bx bx-heart'></i>-
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-12 align-self-center">
+                                            <h1 class="txt_nama2">Ikke Suhar Listianingsih</h1>
+                                            <p class="text-center text-white">Putri dari Bpk. Sohar & Ibu Sulistiani</p>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="row justify-content-center mt-2">
+                                        <div class="col-sm-12 align-self-center">
+                                            <p class="text-center text_kecil text-white">
+                                                “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+                                                isteri-isteri
+                                                dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram
+                                                kepadanya,
+                                                dan
+                                                dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang
+                                                demikian
+                                                itu
+                                                benar-benar terdapat tanda-tanda bagi kaum yang berfikir.”
+                                            </p>
+                                            <p class=" text-center mt-2 text-white">
+                                                <b>Al-Qur’an Surat Ar-Ruum (30:21)</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== lokasi ===============-->
+        <section id="lokasi">
+            <div class="border-left-right">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-content">
+                            <h5 class="text-center text-white  mt-5"><b>Acara Kami</b></h5>
+                            <div class=" col-12 mt-5">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-6">
+                                        <div class="card-panel" data-aos="zoom-in">
+                                            <ul class="list-group text-center ">
+                                                <li class="fw-bold">
+                                                    <h5> Akad Nikah </h5>
+                                                    <hr>
+                                                </li>
+                                                <li class="fw-bold">
+                                                    <i class="bx bx-calendar fw-bold"></i> Kamis, 13 Juli 2023 <br>
+                                                </li>
+                                                <li class="">
+                                                    <i class="bx bx-timer "></i> Pukul 09:00 s/d Selesai
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="card-panel" data-aos="zoom-in">
+                                            <ul class="list-group text-center ">
+                                                <li class="fw-bold">
+                                                    <h5> Resepsi </h5>
+                                                    <hr>
+                                                </li>
+                                                <li class="fw-bold">
+                                                    <i class="bx bx-calendar fw-bold"></i> Kamis, 13 Juli 2023 <br>
+                                                </li>
+                                                <li class="">
+                                                    <i class="bx bx-timer "></i> s/d Selesai
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card-panel mt-3" data-aos="zoom-in">
+                                <ul class="list-group ">
+                                    <li class="fw-bold">
+                                        <h4> <i class="bx bx-map"></i> Lokasi</h4>
+                                        <p>
+                                            Perum Villa Asri 2, Gg. Samiaji, Wanaherang, Kec. Gn.
+                                            Putri, Kabupaten Bogor, Jawa Barat 16965
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="col-sm-12">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.2363880223747!2d106.93639360173876!3d-6.424510748741824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699518cfea1be3%3A0x3e1400844319dd4d!2sPerum%20Villa%20Asri%202!5e1!3m2!1sid!2sid!4v1684650207900!5m2!1sid!2sid"
+                                        style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Gallery ===============-->
+        <section id="galeri">
+            <div class="border-left-right">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-conten">
+                            <h5 class="text-center text-white  mt-5 "><b>Gallery Foto</b></h5>
+                            <div class=" card_trans_white" data-aos="zoom-in">
+                                <div class="col-12 mt-3">
+                                    <div id="gallery" class="container-fluid">
+                                        <img src="./assets/img/my/01.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/02.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/03.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/04.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/05.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/06.jpg" class="img-responsive">
+                                        <img src="./assets/img/my/08.jpg" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ucapan ===============-->
+        <section id="ucapan">
+            <div class="border-top-bottom">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-content">
+
+                            <h5 class="text-center  mt-5 text-white "><b>Kirim Ucapan</b></h5>
+                            <div class="card-panel" data-aos="zoom-in">
+                                <form>
+                                    <div id="alertUcapan" style="display:none;">
+                                        <div id="alert-version" class="alert alert-success alert-dismissible fade show"
+                                            role="alert">
+                                            <strong id="namaTamu-alert"></strong>
+                                            <p> Jagan Lupa dateng ya.😇 Terima kasih ...</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label class="text-start">Nama</label>
+                                        <input type="text" class="form-control" id="namaTamu" placeholder="nama"
+                                            maxlength="10">
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label class="text-start"> Ucapan </label>
+                                        <textarea class="form-control" placeholder="ucapkan" id="ucapanTamu" rows="4"
+                                            maxlength="100"></textarea>
+                                    </div>
+                                </form>
+                                <button id="btn-senducapan" onclick="sendUcapan()" class="btn btn-sm mt-2">kirim
+                                    Ucapan</button>
+                            </div>
+
+                            <div class="card-panel mt-3" data-aos="zoom-in">
+                                <div class="row text-center justify-content-center">
+                                    <div class="col-sm-12">
+                                        <p>
+                                            Kami dan keluarga besar mengundang Bapak/Ibu, Saudara/Saudari sekalian,
+                                            untuk menghadari moment bahagia kami, mohon maaf apa bila ada kesalahan
+                                            dalam
+                                            penulisan nama dan gelar, kami ucapkan <br><br>
+                                            <b>-TERIMA KASIH-</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="txt_titel"><br>
+                                <p class="text-center ">Tetap Patuhi Protokol Kesehatan</p>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-4" data-aos="fade-right">
+                                    <div class="card-panel">
+                                        <img src="./assets/img/disten_white.png" alt="Jaga Jarak">
+                                        <p class="text-center">Jaga jarak</p>
+                                    </div>
+                                </div>
+                                <div class="col-4" data-aos="fade-right">
+                                    <div class="card-panel">
+                                        <img src="./assets/img/masker_white.png" alt="Jaga Jarak">
+                                        <p class="text-center">Pakai Masker</p>
+                                    </div>
+                                </div>
+                                <div class="col-4" data-aos="fade-right">
+                                    <div class="card-panel">
+                                        <img src="./assets/img/wash_white.png" alt="Jaga Jarak">
+                                        <p class="text-center">Cuci Tangan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row  justify-content-center">
+                                <div class="col-sm-12">
+                                    <p class="text-center text-white">
+                                        <br>
+                                        -Design By :
+                                        <a href="https://www.akscoding.com/p/contact-us.html"
+                                            class="text-white">Akscoding.com -</a>
+                                        <br><br> <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--=============== AOS JS ===============-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main_black.js"></script>
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+
+
+    <!--=============== fire base  ===============-->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="./assets/js/Firebase.js"></script>
+    <script src="./assets/js/comment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/love.ico">
+    <!--===============BOXICONS===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--=============== AOS CDn ===============-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+
+    <title>Arif & Ikke | Invitations</title>
+</head>
+
+<body>
+    <audio id="myMusic" src="assets/audio/Beautiful_In_White.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <!-- <a href="#" class="nav__logo">Marlon</a> -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#info" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon'></i>
+                            <span class="nav__name">Info</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#lokasi" class="nav__link">
+                            <i class='bx bx-calendar-heart nav__icon'></i>
+                            <span class="nav__name">Acara</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#galeri" class="nav__link">
+                            <i class='bx bx-image nav__icon'></i>
+                            <span class="nav__name">Gallery</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#ucapan" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon'></i>
+                            <span class="nav__name">ucapan</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 
+            <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+        </nav>
+
+
+        <div class="btn_play">
+            <a onclick="OnOffMusic();">
+                <i id="icon-sound" class='bx bx-pause'></i>
+            </a>
+        </div>
+    </header>
+
+    <main id="maintext">
+        <!--=============== HOME ===============-->
+        <section class="" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="profile">
+                        <div class="txt_titel">
+                            <p class="text-center mt-5"><b> The Wedding Of </b></p>
+                        </div>
+                        <div class="row justify-content-center profile_content ">
+                            <div class="col-sm-6 align-self-center">
+                                <h1 class="text-center txt-nama">Maulana</h1>
+                                <p class=" text-center text-dan"> <b>dan</b> </p>
+                                <h1 class=" text-center txt-nama">Ikke</>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center text-center ">
+                            <div class="col-3">
+                                <div class="card_counter">
+                                    <b class="">Hari</b>
+                                    <h3 id="hari">00</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card_counter">
+                                    <b>Jam</b>
+                                    <h3 id="jam">00</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card_counter">
+                                    <b>Menit</b>
+                                    <h3 id="menit">00</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card_counter">
+                                    <b>Detik</b>
+                                    <h3 id="detik">00</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ABOUT  info===============-->
+        <section id="info">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="info">
+                        <div class="txt_titel">
+                            <p class="text-center "><b>Assalamu’alaikum Wr. Wb.</b></p>
+                        </div>
+
+                        <div class="card_trans_white" data-aos="fade-up">
+                            <!-- <h2 class="section__title">About</h2> -->
+                            <div class="row  justify-content-center">
+                                <div class="col-sm-12">
+                                    <p class="text-center">
+                                        Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan
+                                        menyelenggarakan acara pernikahan :</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 align-self-center">
+                                    <div class="txt-nama2 ">Maulana Syarief Hidayat</div>
+                                    <p>Putra dari Bpk. Suyatno & Ibu Anye Mardiana</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 align-self-center">
+                                    <p class="icon_haeart">-<i class='bx bx-heart'></i>-</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 align-self-center">
+                                    <div class="txt-nama2">Ikke Suhar Listianingsih</div>
+                                    <P>Putri dari Bpk. Sohar & Ibu Sulistiani</P>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-sm-12 align-self-center">
+                                    <p class="text-center">
+                                        “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+                                        isteri-isteri
+                                        dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan
+                                        dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian
+                                        itu
+                                        benar-benar terdapat tanda-tanda bagi kaum yang berfikir.”
+
+                                    </p>
+                                    <p class="text-center mt-2">
+                                        <b>Al-Qur’an Surat Ar-Ruum (30:21)</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== lokasi ===============-->
+        <section id="lokasi">
+            <div class="container">
+                <div class="row">
+                    <div class="lokasi">
+                        <div class="txt_titel_pink">
+                            <p class="text-center "><b>Acara Kami</b></p>
+                        </div>
+                        <div class="card_trans_white" data-aos="zoom-in">
+                            <div class="text-center">
+                                <ul class="list-group ">
+                                    <li class="fw-bold">
+                                        <h3 class=""> <i class="bx bx-calendar"></i> Kamis, 13 Juli 2023</h3>
+                                        <p> <i class="bx bx-timer "></i> Pukul : 09.00 WIB s/d Selesai</p>
+                                        <hr>
+                                    </li>
+                                    <li class="">
+                                        <h5 class="fw-bold">Lokasi</h5>
+                                        <p>
+                                            Perum Villa Asri 2, Gg. Samiaji, Wanaherang, Kec. Gn.
+                                            Putri, Kabupaten Bogor, Jawa Barat 16965
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.2363880223747!2d106.93639360173876!3d-6.424510748741824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699518cfea1be3%3A0x3e1400844319dd4d!2sPerum%20Villa%20Asri%202!5e1!3m2!1sid!2sid!4v1684650207900!5m2!1sid!2sid"
+                                    style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Gallery ===============-->
+        <section id="galeri">
+            <div class="container">
+                <div class="row">
+                    <div class="galeri">
+                        <div class="txt_titel">
+                            <p class="text-center "><b>Gallery Foto</b></p>
+                        </div>
+                        <div class="card_trans_white" data-aos="zoom-in">
+                            <div class="row justify-content-center" id="img_geleri">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== CONTACTME ===============-->
+        <section id="ucapan">
+            <div class="container">
+                <div class="row " data-aos="zoom-in">
+                    <div class="ucapan">
+                        <div class="txt_titel">
+                            <p class="text-center "><b>Ucapan</b></p>
+                        </div>
+
+                        <div class="card_trans_white">
+                            <form>
+                                <div id="alertUcapan" style="display:none;">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong id="namaTamu-alert"></strong>
+                                        <p> Jagan Lupa dateng ya.😇 Terima kasih ...</p>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label class="text-start">Nama</label>
+                                    <input type="text" class="form-control" id="namaTamu" placeholder="nama"
+                                        maxlength="10">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label class="text-start"> Ucapan </label>
+                                    <textarea class="form-control" id="ucapanTamu" rows="4" maxlength="50"></textarea>
+                                </div>
+                            </form>
+                            <button id="btn-senducapan" onclick="sendUcapan()"
+                                class="btn btn-sm btn-success mt-2 mb-2">kirim
+                                Ucapan</button>
+                            <button id="btn-senducapan" onclick="getDataUcapan()"
+                                class="btn btn-sm btn-info mt-2 mb-2">get
+                                ucapan</button>
+                        </div>
+
+                        <div class="card_trans_white mt-4">
+                            <div class="row  justify-content-center">
+                                <div class="col-sm-12">
+                                    <p class="text-center">
+                                        Kami dan keluarga besar mengundang Bapak/Ibu, Saudara/Saudari sekalian,
+                                        untuk menghadari moment bahagia kami, mohon maaf apa bila ada kesalahan dalam
+                                        penulisan nama dan gelar, kami ucapkan <br>
+                                        <b>TERIMA KASIH</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 align-self-center">
+                                    <div class="txt-nama2 text-center ">- Maulana & Ikke -</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="txt_titel">
+                            <p class="text-center ">Tetap Patuhi Protokol Kesehatan</p>
+                        </div>
+                        <div class="row  justify-content-center">
+                            <div class="col-4" data-aos="fade-right">
+                                <div class="card_trans_white">
+                                    <img src="./assets/img/disten.png" alt="Jaga Jarak">
+                                    <b class="text-center">Jaga jarak</b>
+                                </div>
+                            </div>
+                            <div class="col-4" data-aos="fade-right">
+                                <div class="card_trans_white">
+                                    <img src="./assets/img/masker.png" alt="Jaga Jarak">
+                                    <b class="text-center">Pakai Masker</b>
+                                </div>
+                            </div>
+                            <div class="col-4" data-aos="fade-right">
+                                <div class="card_trans_white">
+                                    <img src="./assets/img/wash.png" alt="Jaga Jarak">
+                                    <b class="text-center">Cuci Tangan</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  justify-content-center">
+                            <div class="col-sm-12">
+                                <p class="text-center">
+                                    <br>
+                                    <br>
+                                    Design By :
+                                    <a href="https://www.akscoding.com/p/contact-us.html"
+                                        class="text-white">Akscoding.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!--=============== AOS JS ===============-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!--=============== fire base  ===============-->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="./assets/js/Firebase.js"></script>
+    <script src="./assets/js/comment.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== lightbox JS ===============-->
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+</body>
+
+</html>

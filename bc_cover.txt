@@ -1,0 +1,40 @@
+ <section id="cover">
+     <div class="sampul">
+         <div class="sampul-bgtrans">
+             <div class="container">
+                 <div class="row justify-content-md-center">
+                     <div class="col-12 align-self-center">
+                         <div class="sampul_conten">
+                             <div class="col-12 align-self-center">
+                                 <div class="txt_titel mt-5">
+                                     <p class="text-center"><b>- Wedding Invitations -</b></p>
+                                 </div>
+                                 <div class="col-sm-12 align-self-center">
+                                     <div class="nama_sambung text-white">Maulana & Ikke</div>
+                                 </div>
+                                 <div class="col-sm-12 align-self-center">
+                                     <p><b>Kamis 13 Juli 2023</b></p>
+                                 </div>
+                                 <div class="col-sm-12 align-self-center">
+                                     <button id="btnCover" href="#home" class="btn-sampul" onclick="openUdangan()">
+                                         <i class="bx bx-envelope-open"></i> Buka
+                                         Undangan</button>
+                                 </div>
+                                 <div class="col-sm-12 align-self-center mt-2">
+                                     <P>Kepada Yth. Bapak/Ibu/Saudara/i :</P>
+                                     <hr>
+                                     <!-- <P><b>TAMU UNDANGAN</b></P> -->
+                                     <p class="text-center" id="nama_undangan"><b>TAMU UNDANGAN</b></p>
+                                     <hr>
+                                     <p style="font-size: 14px;">Mohon Maaf Apabila ada kesalahan dalam penulisan,
+                                         Nama dan
+                                         Gelar</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>

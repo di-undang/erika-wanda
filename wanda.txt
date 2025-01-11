@@ -1,0 +1,69 @@
+dev.undangannikah@gmail.com
+devnikah321
+--------------------------------
+API 
+https://script.google.com/macros/s/AKfycbx7Wp-wSIc7sL9nIfEYd7GVQCbDiK4wiZug4yt99FGS-3O6bxOfn18WZU9e-wY70hH3JA/exec
+
+Api key
+AKfycbwyuJ33GSLq2AAOBbJGa0R6FDN_RbgpLj5i3wHrMJ83v289osCECAxvIxwXuB6VeWId1w
+
+json
+{
+		"IDUcapan": 1,
+		"UserName": "user 1",
+		"Ucapan": "Selamt ya",
+		"Kehadiran": "Hadir",
+		"TanggalSubmit": "2999-12-31T17:00:00.000Z"
+	}
+
+======================================
+Data :
+*1. ERIKA NURUL CAHYANTI
+  - bapak yamdi dan ibu dwi lestari
+  - Anak pertama 
+
+*2. WANDAPRANATA
+  - Nama =  bapak usman udin dan ibu       asmawati
+  - Anak Keempat
+
+3. Lokasi 
+ - Akad Nikah
+ - sabtu 25 januari 2025
+pukul 07.00 WIB S/D Selesai
+   
+
+ - Resepsi
+ -Dusun II, Jimbung, Kec. Kalikotes, Kabupaten Klaten, Jawa Tengah 57451
+https://maps.app.goo.gl/H7XhsPCC7554FbFz8?g_st=aw
+
+REK BANK BCA,. A/N WANDA PRANATA, 1660467625
+
+REK BANK BCA A/N ERIKA NURUL CAHYANTI, 7660438143
+=====================================================
+cover element
+cover_namasambung = "Pria & Wanita"
+cover_tglresepsi =" tgl resepsi"
+
+#47141d (merah)
+#000000 (Hitam)
+#000001 (Hampir hitam)
+#313946 (Abu-abu gelap kebiruan)
+#464f63 (Abu-abu kebiruan)
+#424a5d (Abu-abu kebiruan lebih gelap) diatas dengan javascrip
+
+-----------------------------------
+info
+
+info_wanitaFullName = "nama lengakp"
+info_wanitaOrtu = " Putri dari bapak & ibu"
+
+info_priaFullName
+info_priaOrtu
+--------------------------------------
+lokasi
+
+lokasi_tglAcara
+lokasi_Alamat
+
+1660467625
+7660438143

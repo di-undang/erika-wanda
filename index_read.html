@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/love.ico">
+    <!--===============BOXICONS===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--=============== AOS CDn ===============-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+
+    <title>Arif & Ikke | Invitations</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="txt_titel">
+                <p id="txt_totalData" class="text-center"> <b>list data Ucapan</b> </p>
+                <button id="btn-senducapan" onclick="getDataUcapan()"
+                    class="btn btn-sm btn-outline-success mt-2 mb-2">load
+                    data</button>
+                <div class="justify-content-end">
+                    <input type="text" value="" name="k01cIdComment" id="k01cIdComment" />
+                    <button id="btn-senducapan" onclick="RemoveComent()"
+                        class="btn btn-sm btn-outline-danger mt-2 mb-2">remove</button>
+                </div>
+            </div>
+            <!--=============== list data comment  ===============-->
+            <div class="row  justify-content-center">
+                <div class="list_comment">
+                    <div class="col-12" id="list-comment">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--=============== fire base  ===============-->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="./assets/js/Firebase.js"></script>
+    <script src="./assets/js/comment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+1.halaman Cover
+2. foto mempelay
+    - foto nama (nama ortu)
+3.Quotes al-quran
+4.Story Love
+5.maps
+
+<h2>Wedding Invitations</h2>
+            <h1>Maulana & Ikke</h1>
+            <P>19 Maret 2023</P>
+            <Button class="btn-sampul" onclick="openUdangan()">Buka Undangan</Button>
+            <P>Kepada Yth. Bapak/Ibu/Saudara/i :</P>
+            <P><b>TAMU UNDANGAN</b></P>
