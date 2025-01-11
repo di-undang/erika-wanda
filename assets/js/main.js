@@ -54,10 +54,9 @@ const objNamaTamu = document.getElementById("nama_undangan");
 // Event Load Awal
 window.addEventListener("load", () => {
      // tutup coper sbntar
-
-     objCover.style.display = "none";
-     objMainext.style.display = "block";
-     objMenu.style.display = "block";
+     // objCover.style.display = "none";
+     // objMainext.style.display = "block";
+     // objMenu.style.display = "block";
 
      //Lib aimation on Scroll
      AOS.init();
@@ -65,8 +64,8 @@ window.addEventListener("load", () => {
      cm01SetCoverData();
      counterdown();
 
-     //  objMainext.style.display = "none";
-     //  objMenu.style.display = "none";
+     objMainext.style.display = "none";
+     objMenu.style.display = "none";
      setNamaTamu();
      ShowImageGaleri();
 });
