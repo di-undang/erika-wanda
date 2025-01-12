@@ -15,9 +15,12 @@ const prmWanita_Urutan = "Pertama";
 
 // Data Resepsi
 const prmTglResepsi = "Sabtu, 25 januari 2025";
-const prmTglJamResepsi = "07.00";
-const prmAlamat =
-     " Dusun II, Jimbung, Kec. Kalikotes, Kabupaten Klaten, Jawa Tengah 57451";
+const prmTglJamAkad = "Pukul : 07.00 WIB s/d Selesai";
+const prmTglJamResepsi = "Pukul : 09.00 WIB s/d Selesai";
+const prmLokasi =
+     "Rumah Bapak Yamdi (Desa Krambil Gede RT 03 RW 17, Kelurahan Jimbung, Kecamatan Kalikotes,  Klaten, Jawa Tengah";
+const prmAlamatLengkap =
+     "Desa Krambil Gede RT 03 RW 17, Kelurahan Jimbung, Kecamatan Kalikotes,  Klaten, Jawa Tengah";
 
 // Display Element
 const objCover_NamaSambung = document.getElementById("cover_namasambung");
@@ -122,8 +125,20 @@ function cm03SetDataInfoMempelay() {
      const objPriaFullname = document.getElementById("info_priaFullName");
      const objPriaOrtuFull = document.getElementById("info_priaOrtu");
 
-     const objlokasi_tglAcara = document.getElementById("lokasi_tglAcara");
-     const objlokasi_alamat = document.getElementById("lokasi_Alamat");
+     // akad Nikah
+     const objLokasi_TglAkad = document.getElementById("lokasi_tglAkad");
+     const objlokasi_JamAkad = document.getElementById("lokasi_JamAkad");
+     const objlokasi_alamat = document.getElementById("lokasi_AlamatAkad");
+
+     // Resepsi
+     const objLokasi_TglResepsi = document.getElementById("lokasi_tglResepsi");
+     const objlokasi_JamResepsi = document.getElementById("lokasi_JamResepsi");
+     const objlokasi_alamatResepsi = document.getElementById(
+          "lokasi_AlamatRespsi"
+     );
+
+     //alamat lengkap maps lokasi_Alamat
+     const objlokasi_Maps = document.getElementById("lokasi_Alamat");
 
      // ************************* HOME ***************************
 
@@ -151,8 +166,18 @@ function cm03SetDataInfoMempelay() {
           prmPria_NameIbu;
 
      // lokasi
-     objlokasi_tglAcara.innerHTML = prmTglResepsi;
-     objlokasi_alamat.innerHTML = prmAlamat;
+     // Akad Nikah
+     objLokasi_TglAkad.innerHTML = prmTglResepsi;
+     objlokasi_JamAkad.innerHTML = prmTglJamAkad;
+     objlokasi_alamat.innerHTML = prmLokasi;
+
+     // Resepsi
+     objLokasi_TglResepsi.innerHTML = prmTglResepsi;
+     objlokasi_JamResepsi.innerHTML = prmTglJamResepsi;
+     objlokasi_alamatResepsi.innerHTML = prmLokasi;
+
+     //alamat lengkap
+     objlokasi_Maps.innerHTML = prmAlamatLengkap;
 }
 
 function scrollActive() {
@@ -245,7 +270,7 @@ function ShowImageGaleri() {
           var no = i.toString().padStart(2, "0");
 
           // Tambahkan elemen gambar ke dalam objGaleri
-          objGaleri.innerHTML += `<div class="col-3 mt-2" data-aos="zoom-in">
+          objGaleri.innerHTML += `<div class="col-sm-6 col-lg-3 mt-2 " data-aos="zoom-in">
                                     <a class="example-image-link" href="./assets/img/wanda/prewed_${no}.jpg"
                                         data-lightbox="example-set"
                                         data-title="klik sisi kanan / kiri foto untuk next foto.">

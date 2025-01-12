@@ -1,7 +1,7 @@
 // nama table nya (Node nya di firebase)
 
 // Initialize Firebase
-var prmTotaldata = document.getElementById("txt_totalData");
+var prmTotaldata = document.getElementById("total_ucapan");
 var currentdate = Date();
 var prmDataUCapan = [];
 
@@ -13,7 +13,16 @@ const listComment = document.getElementById("list-comment");
 
 function getCurentDatetime() {
      var date = new Date();
-     return date.toISOString().replace("T", " ").substring(0, 19);
+
+     var year = date.getFullYear();
+     var month = String(date.getMonth() + 1).padStart(2, "0"); // Bulan dimulai dari 0
+     var day = String(date.getDate()).padStart(2, "0");
+
+     var hours = String(date.getHours()).padStart(2, "0"); // Jam 24 jam
+     var minutes = String(date.getMinutes()).padStart(2, "0");
+     var seconds = String(date.getSeconds()).padStart(2, "0");
+
+     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
 function showAlert(prmNama, prmIsError = false) {
@@ -86,22 +95,22 @@ function sendUcapan() {
                headers: {
                     "Content-Type": "application/json",
                },
-               body: JSON.stringify(prmDataUCapan), // Kirim data sebagai JSON
+               body: JSON.stringify(prmDataUCapan),
           })
-               .then((response) => response.json())
-               .then((data) => {
-                    // console.log("Berhasil:", data);
-                    //showAlert(prmNama.value);
+               .then(() => {
+                    // notif sukses dan panggila nama nya
+                    showAlert(prmNama.value);
+
                     prmNama.value = "";
                     prmUcapan.value = "";
                     btnSend.textContent = "Kirim Ucapan";
                     btnSend.disabled = false;
 
-                    getDataUcapan();
+                    getDataUcapan(); // Panggil fungsi lain jika tidak membutuhkan respons langsung
                })
                .catch((error) => {
-                    //console.error("Error:", error);
-                    showAlert(error, true);
+                    console.error("Error:", error);
+                    showAlert(error.message, true);
                });
      }
 }
@@ -134,26 +143,32 @@ function getDataUcapan() {
 getDataUcapan();
 
 function DisplayComment(prmListData) {
+     //Total Data
+     prmTotaldata.textContent = "";
+     prmTotaldata.textContent = ` ${prmListData.length} Tamu`;
+     // bersihkan Element
      listComment.innerHTML = "";
 
-     //  prmTotaldata.textContent = "";
-     //  prmTotaldata.textContent =
-     //       "Total Data " + prmListData.length + " Komentar ";
+     // Urutkan data berdasarkan tanggal terbaru
+     prmListData.sort(
+          (a, b) => new Date(b.TanggalSubmit) - new Date(a.TanggalSubmit)
+     );
 
      // looping data key
      prmListData.forEach((item) => {
           //${ prmListData[key].key }
-          listComment.innerHTML += `<div class="comment-card">
+          listComment.innerHTML += `<div class="comment-card mt-2">
                                     <!-- Kolom kiri: Ikon user -->
-                                    <div class="comment-icon">
-                                        <img src="https://via.placeholder.com/40" alt="User Icon">
+                                    <div class="comment-icon"><img src="assets/img/user.png" alt="User Icon">
                                     </div>
 
                                     <!-- Kolom kanan: Konten komentar -->
                                     <div class="comment-content">
                                         <div class="name">${
                                              item.UserName || "Unknown"
-                                        } | ${item.Kehadiran}</div>
+                                        } | <span class="badge ${
+               item.Kehadiran === "Datang" ? "bg-success" : "bg-danger"
+          }">${item.Kehadiran}</span></div>
                                         <div class="datetime">${formatDate(
                                              item.TanggalSubmit
                                         )}</div>
@@ -169,6 +184,19 @@ function DisplayComment(prmListData) {
      // 		"Ucapan": "ok",
      // 		"Kehadiran": "ok",
      // 		"TanggalSubmit": "2025-01-11T10:38:18.000Z"
+
+     // <div class="comment-card">
+     //                                <!-- Kolom kiri: Ikon user -->
+     //                                <div class="comment-icon">
+     //                                    <img src="assets/img/user.png" alt="User Icon">
+     //                                </div>
+     //                                <!-- Kolom kanan: Konten komentar -->
+     //                                <div class="comment-content">
+     //                                    <div class="name">Adon | <span class="badge bg-primary">Datang</span></div>
+     //                                    <div class="datetime">10 jam lalu</div>
+     //                                    <div class="message">mantap</div>
+     //                                </div>
+     //                            </div>
 }
 
 function formatDate(dateString) {

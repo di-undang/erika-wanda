@@ -1,0 +1,71 @@
+<section id="home">
+     <div class="container">
+          <div class="row">
+               <div class="profile">
+                    <div class="profile_content">
+                         <p class="text-center">The Wedding Of</p>
+                         <div class="profile_initiald">
+                              <div class="row">
+                                   <div class="col-12 text-center">
+                                        <!-- Inisial pertama "I" -->
+                                        <h1
+                                             id="home_wanitaName"
+                                             class="txt-nama d-inline">
+                                             E
+                                        </h1>
+
+                                        <!-- Simbol "&" -->
+                                        <h1 class="text-dan d-inline">
+                                             <b>&</b>
+                                        </h1>
+
+                                        <!-- Inisial kedua "M" -->
+                                        <h1
+                                             id="home_PriaName"
+                                             class="txt-nama d-inline">
+                                             W
+                                        </h1>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div
+                              class="row justify-content-center text-center mt-3">
+                              <div class="col-3">
+                                   <div class="">
+                                        <h3 id="hari">00</h3>
+                                        <b class="">Hari</b>
+                                   </div>
+                              </div>
+                              <div class="col-3">
+                                   <div class="">
+                                        <h3 id="jam">00</h3>
+                                        <b>Jam</b>
+                                   </div>
+                              </div>
+                              <div class="col-3">
+                                   <div class="">
+                                        <h3 id="menit">00</h3>
+                                        <b>Menit</b>
+                                   </div>
+                              </div>
+                              <div class="col-3">
+                                   <div class="">
+                                        <h3 id="detik">00</h3>
+                                        <b>Detik</b>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+fetch(prmEndPoint, { method: "POST", mode: "no-cors", headers: { "Content-Type":
+"application/json", }, body: JSON.stringify(prmDataUCapan), // Kirim data
+sebagai JSON }) .then((response) => response.json()) .then((data) => { //
+console.log("Berhasil:", data); //showAlert(prmNama.value); prmNama.value = "";
+prmUcapan.value = ""; btnSend.textContent = "Kirim Ucapan"; btnSend.disabled =
+false; getDataUcapan(); }) .catch((error) => { console.error("Error:", error);
+showAlert(error, true); });

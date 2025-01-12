@@ -8,6 +8,13 @@
   src: url('GreatVibes-Regular.TTF');
 } */
 
+@font-face {
+     font-family: "Hurricane"; /* Nama font yang akan digunakan */
+     src: url("../font/Hurricane-Regular.ttf") format("truetype"); /* Format TTF */
+     font-weight: normal; /* Berat font: normal, bold, dll */
+     font-style: normal; /* Gaya font: normal, italic, dll */
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
      --header-height: 3rem;
@@ -17,7 +24,7 @@
      --sat: 63%;
      --first-color: #b76a7e;
      --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-     --title-color: hsl(var(--hue), 12%, 15%);
+     --title-color: #d7d7d7;
      --text-color: hsl(var(--hue), 8%, 35%);
      --body-color: hsl(var(--hue), 100%, 99%);
      --container-color: #fff;
@@ -125,9 +132,9 @@ img {
      bottom: 24%;
      right: 25%;
      font-size: 25px;
-     color: #67302d;
+     color: #cdd3de;
      border-radius: 50%;
-     background-color: #f5ada9;
+     background-color: #464f63;
      box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
      padding: 2px 2px 2px 4px;
      align-content: center;
@@ -141,9 +148,9 @@ img {
      bottom: 15%;
      right: 25%;
      font-size: 25px;
-     color: #67302d;
+     color: #cdd3de;
      border-radius: 50%;
-     background-color: #f5ada9;
+     background-color: #464f63;
      box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
      padding: 2px 2px 2px 4px;
      align-content: center;
@@ -156,7 +163,7 @@ img {
      bottom: 0;
      left: 0;
      right: 0;
-     background-color: #fff;
+     background-color: #424a5d;
      box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
      height: 50px;
      padding: 10px;
@@ -211,7 +218,7 @@ img {
   color: var(--first-color);
   transition: .3s; */
      color: var(--first-color);
-     border-bottom: #b76a7e solid 3px;
+     border-bottom: #d1cdce solid 3px;
      transition: 0.9s;
 }
 
@@ -279,13 +286,12 @@ img {
 }
 
 .txt-nama {
-     font-family: "Water Brush";
+     font-family: "Hurricane";
      font-style: normal;
      letter-spacing: -0.04em;
      /* text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
      color: #ffffff;
      font-size: 3rem; /* Sesuaikan ukuran font sesuai kebutuhan */
-     font-weight: bold;
 }
 
 .text-dan {
@@ -387,26 +393,20 @@ img {
      justify-content: center;
      align-items: center;
 }
-.profile .bg-trans {
-     position: absolute; /* Membuat overlay menempel ke .profile */
-     top: 0;
-     left: 0;
-     width: 100%; /* Sama dengan lebar .profile */
-     min-height: 85vh;
-     background: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
-     z-index: 1; /* Overlay di bawah konten */
-}
 
-.profile .profile_content {
-     position: relative; /* Relative memastikan elemen ini berada di atas overlay */
-     z-index: 2; /* Lebih tinggi dari overlay */
-     width: 60%;
-     height: auto;
-     margin: 0 auto;
-     padding: 10px;
-     color: #e7e6e6;
+.profile_content {
+     position: absolute; /* Posisi absolut untuk mengatur posisi relatif terhadap parent */
+     bottom: 75px; /* Posisikan di bagian bawah */
+     width: 45%; /* Lebar penuh */
+     background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0)
+     ); /* Gradien hitam transparan */
+     color: #e7e6e6; /* Warna teks */
+     padding: 10px; /* Jarak padding */
+     text-align: center; /* Pusatkan teks */
 }
-
 .profile_initial {
      padding: 10px;
      border-radius: 50%;
@@ -416,15 +416,33 @@ img {
 
 .info {
      width: 50%;
-     height: auto;
+     min-height: 95vh;
      margin: 0 auto;
-     background-color: #313946;
+     background-color: #313946; /* Warna latar belakang jika gambar tidak dimuat */
+     background-image: linear-gradient(
+               rgba(49, 57, 70, 0.7),
+               rgba(49, 57, 70, 0.7)
+          ),
+          url("../img/bg_dongker.jpg"); /* Ganti dengan path gambar Anda */
+     background-size: cover; /* Gambar menutupi seluruh elemen */
+     background-position: center; /* Posisikan gambar di tengah */
+     background-repeat: no-repeat; /* Hindari pengulangan gambar */
      padding: 25px;
-     /* background-position: top 0px left 0px, bottom 0px right 0px;
-     background-image: url("../img/bg_top_left.png"),
-          url("../img/bg_bottom_right.png"); */
-     /* background-repeat: no-repeat;
-     background-size: 35%; */
+}
+.info img {
+     width: 25%;
+     height: 200px;
+     border-radius: 10%; /* Membuat sudut melengkung */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan lembut */
+     object-fit: cover; /* Gambar di-crop agar memenuhi elemen tanpa distorsi */
+     object-position: center; /* Fokus gambar di tengah */
+     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek animasi saat interaksi */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Perkuat bayangan saat di-hover */
+}
+
+.quotes-info {
+     background-color: #2d0402;
+     color: #d7d7d7;
 }
 
 .card_trans_white {
@@ -432,7 +450,7 @@ img {
      background-color: #f5f5f5;
      color: #2c2c2c;
      height: auto;
-     border-radius: 5%;
+     border-radius: 15px;
      padding: 20px;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -509,15 +527,16 @@ img {
      margin: 0 auto; /* Pusatkan gambar jika diperlukan */
 }
 
+.btn-copy {
+     background: #464f63;
+     color: #fff;
+}
+
 /*=============== card Comentar===============*/
 #commentBox {
      max-height: 400px; /* Tinggi maksimal kotak */
      overflow-y: auto; /* Scroll vertikal */
-     border: 1px solid #ddd; /* Border kotak */
-     border-radius: 8px; /* Sudut melengkung */
      padding: 1rem; /* Spasi dalam kotak */
-     background-color: #f9f9f9; /* Latar belakang */
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan */
 }
 
 /* Scrollbar styling */
@@ -541,7 +560,7 @@ img {
      align-items: flex-start;
      border: 1px solid #ddd;
      border-radius: 8px;
-     padding: 1rem;
+     padding: 5px;
      background-color: #f9f9f9;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -552,12 +571,12 @@ img {
      display: flex;
      justify-content: center;
      align-items: center;
-     margin-right: 1rem;
+     margin: 1rem;
 }
 
 .comment-icon img {
-     width: 40px;
-     height: 40px;
+     width: 50px;
+     height: 50px;
      border-radius: 50%;
      background-color: #ccc;
      object-fit: cover;
@@ -569,21 +588,21 @@ img {
 }
 
 .comment-content .name {
-     font-size: 1rem;
+     font-size: 0.9rem;
      font-weight: bold;
      color: #333;
 }
 
 .comment-content .datetime {
-     font-size: 0.9rem;
+     font-size: 0.8rem;
      color: #666;
-     margin-top: 0.2rem;
+     margin-top: 2px;
 }
 
 .comment-content .message {
      font-size: 0.95rem;
      color: #444;
-     margin-top: 0.5rem;
+     margin-top: 0.1rem;
      line-height: 1.4;
 }
 /*=============== edn  card Comentar ===============*/
@@ -641,7 +660,9 @@ img {
           width: 100%;
           padding: 15px;
      }
-
+     .profile_content {
+          width: 100%; /* Lebar penuh */
+     }
      .info {
           width: 100%;
           padding: 15px;
@@ -691,6 +712,9 @@ img {
      .profile {
           width: 100%;
           padding: 15px;
+     }
+     .profile_content {
+          width: 100%; /* Lebar penuh */
      }
 
      .info {
