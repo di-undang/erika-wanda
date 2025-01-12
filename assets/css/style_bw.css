@@ -366,7 +366,7 @@ img {
 }
 
 .btn-sampul {
-     background-color: #b76a7e;
+     background-color: #313946;
      border: none;
      color: #fff;
      padding: 10px 32px;
@@ -432,7 +432,7 @@ img {
 .info img {
      width: 25%;
      height: 200px;
-     border-radius: 10%; /* Membuat sudut melengkung */
+     border-radius: 10px; /* Membuat sudut melengkung */
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan lembut */
      object-fit: cover; /* Gambar di-crop agar memenuhi elemen tanpa distorsi */
      object-position: center; /* Fokus gambar di tengah */
@@ -446,11 +446,10 @@ img {
 }
 
 .card_trans_white {
-     /* background-color: rgba(255, 255, 255, 0.139); */
      background-color: #f5f5f5;
      color: #2c2c2c;
      height: auto;
-     border-radius: 15px;
+     border-radius: 10px;
      padding: 20px;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

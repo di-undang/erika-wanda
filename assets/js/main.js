@@ -270,7 +270,7 @@ function ShowImageGaleri() {
           var no = i.toString().padStart(2, "0");
 
           // Tambahkan elemen gambar ke dalam objGaleri
-          objGaleri.innerHTML += `<div class="col-sm-6 col-lg-3 mt-2 " data-aos="zoom-in">
+          objGaleri.innerHTML += `<div class="col-12 col-sm-6 col-lg-3 mt-2 " data-aos="zoom-in">
                                     <a class="example-image-link" href="./assets/img/wanda/prewed_${no}.jpg"
                                         data-lightbox="example-set"
                                         data-title="klik sisi kanan / kiri foto untuk next foto.">
