@@ -337,3 +337,24 @@ function salinRekening(rekeningId) {
                console.error("Error:", err);
           });
 }
+
+document.addEventListener("keydown", function (e) {
+     // Cegah F12 (Alat Developer)
+     if (e.key === "F12") {
+          e.preventDefault();
+     }
+
+     // Cegah Ctrl+Shift+I atau Ctrl+Shift+C
+     if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C")) {
+          e.preventDefault();
+     }
+
+     // Cegah Ctrl+U (Lihat Sumber Halaman)
+     if (e.ctrlKey && e.key === "u") {
+          e.preventDefault();
+     }
+});
+
+document.addEventListener("contextmenu", function (e) {
+     e.preventDefault();
+});
