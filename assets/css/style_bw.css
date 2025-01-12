@@ -607,6 +607,14 @@ img {
 /*=============== edn  card Comentar ===============*/
 
 /*=============== MEDIA QUERIES ===============*/
+/* Atur agar tidak ada kolom yang menjadi 1 */
+@media (max-width: 576px) {
+     .col-sm-6 {
+          flex: 0 0 auto;
+          width: 50%; /* Paksa minimal 2 kolom pada layar kecil */
+     }
+}
+
 /* max-width */
 @media screen and (max-width: 767px) {
      a {
