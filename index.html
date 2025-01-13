@@ -24,7 +24,10 @@
 
     <link rel="stylesheet" href="assets/css/img-galery.css"> 
     <link rel="stylesheet" href="assets/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/bubble_kecil.css"> 
+
+    <!-- animasi SBooble   class="bubble-container"
+    <link rel="stylesheet" href="assets/css/bubble_kecil.css">  -->
+
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> -->
 
@@ -138,9 +141,9 @@
     </section>
 
     <main id="maintext">
-            <div class="bubble-container">
-                <!-- Gelembung akan dihasilkan otomatis oleh CSS -->
-            </div>
+           <!-- <div class="bubble-container">
+                 Gelembung akan dihasilkan otomatis oleh CSS 
+            </div>-->
 
         <!--=============== HOME ===============-->
         <section id="home">
@@ -152,11 +155,11 @@
                             <div class="row">
                                    <div class="col-12 text-center">
                                         <!-- Inisial pertama "I" -->
-                                        <h1 id="home_wanitaName"class="txt-nama d-inline">E</h1>
+                                        <h1 id="home_wanitaName"class="txt-nama d-inline">Initial</h1>
                                         <!-- Simbol "&" -->
                                         <h1 class="txt-nama d-inline"><b>&</b></h1>
                                         <!-- Inisial kedua "M" -->
-                                        <h1 id="home_PriaName" class="txt-nama d-inline">  W </h1>
+                                        <h1 id="home_PriaName" class="txt-nama d-inline">Initial </h1>
                                    </div>
                             </div>
                             
@@ -210,23 +213,25 @@
                                 Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan
                                 menyelenggarakan acara pernikahan :</p>
                                 <hr>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center mt-4 mb-3">
                                 <div class="col-sm-12 align-self-center">
-                                    <img class="img-responsive" src="assets/img/erika.jpeg" data-aos="zoom-in">
+                                    <img class="img-responsive mb-4" src="assets/img/erika.jpeg" data-aos="zoom-in">
                                     <h5 id="info_wanitaFullName" class="txt-nama2 ">mempelai wanita</h5>
                                     <p id="info_wanitaOrtu">ortu wanita</p>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-sm-12 align-self-center">
-                                        <h1 class="txt-nama d-inline text-dark"><b>-&-</b></h1>
+                                        <div class="horizontal-line-text">
+                                            <h1 class="nama_sambung ">&</h1>
+                                        </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center  mt-4 mb-3">
                                 <div class="col-sm-12 align-self-center">
-                                    <img class="img-responsive" src="assets/img/wanda.jpeg" data-aos="zoom-in">
+                                    <img class="img-responsive mb-4" src="assets/img/wanda.jpeg" data-aos="zoom-in">
                                     <h5 id="info_priaFullName" class="txt-nama2">mempelai pria</h5>
-                                    <p id="info_priaOrtu">ortu Pria</p>
+                                    <p id="info_priaOrtu" class="mt-0">ortu Pria</p>
                                 </div>
                             </div>
                             <hr>
@@ -407,7 +412,7 @@
                                 <div class="form-group mt-2">
                                     <label class="text-start">Nama</label>
                                     <input type="text" class="form-control" id="inputNama" placeholder="nama"
-                                        maxlength="10">
+                                        maxlength="15">
                                 </div>
                                  <div class="form-group mt-2">
                                     <label class="text-start">Kehadiran</label>
@@ -479,8 +484,9 @@
     <script src="assets/js/lightbox-plus-jquery.min.js"></script>
     <script src="assets/js/lightbox.js"></script>
 
-    <!--=============== Animasi Bubble ===============--> 
-    <script src="./assets/js/bubble_kecil.js"></script>  
+    <!--=============== Animasi Bubble 
+    <script src="./assets/js/bubble_kecil.js"></script> 
+     ===============--> 
 
     <!--=============== Gsheet Api Ucapan ===============--> 
     <script src="./assets/js/comment.js"></script>  

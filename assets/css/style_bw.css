@@ -381,10 +381,9 @@ img {
 .profile {
      width: 50%;
      min-height: 85vh;
-     background: rgba(10, 9, 9, 0.511); /* Warna hitam transparan */
      margin: 0 auto;
      padding: 15px;
-     background-image: url("../img/bg_cover.jpg"); /* Tambahkan gambar di sini */
+     background-image: url("../img/bg_cover2.jpg"); /* Tambahkan gambar di sini */
      background-size: cover; /* Gambar menutupi elemen */
      background-position: center; /* Posisikan gambar di tengah */
      background-repeat: no-repeat; /* Jangan ulangi gambar */
@@ -400,9 +399,10 @@ img {
      width: 45%; /* Lebar penuh */
      background: linear-gradient(
           to top,
-          rgba(0, 0, 0, 0.8),
-          rgba(0, 0, 0, 0)
-     ); /* Gradien hitam transparan */
+          /* Gradien bergerak dari bawah ke atas */ rgba(0, 0, 0, 0.947),
+          /* Bagian bawah lebih gelap */ rgba(67, 67, 67, 0)
+               /* Bagian atas transparan */
+     );
      color: #e7e6e6; /* Warna teks */
      padding: 10px; /* Jarak padding */
      text-align: center; /* Pusatkan teks */
@@ -429,6 +429,29 @@ img {
      background-repeat: no-repeat; /* Hindari pengulangan gambar */
      padding: 25px;
 }
+/* Untuk Tulisan ada garis kiri dan kanan horizontal */
+.horizontal-line-text {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     position: relative;
+}
+
+.horizontal-line-text::before,
+.horizontal-line-text::after {
+     content: "";
+     width: 50px; /* Set panjang garis */
+     height: 1px;
+     background-color: black;
+     margin: 0 10px;
+}
+
+.horizontal-line-text span {
+     padding: 0 10px;
+}
+/* Untuk Tulisan ada garis kiri dan kanan horizontal */
+
 .info img {
      width: 25%;
      height: 200px;
@@ -607,13 +630,6 @@ img {
 /*=============== edn  card Comentar ===============*/
 
 /*=============== MEDIA QUERIES ===============*/
-/* Atur agar tidak ada kolom yang menjadi 1 */
-@media (max-width: 576px) {
-     .col-sm-6 {
-          flex: 0 0 auto;
-          width: 50%; /* Paksa minimal 2 kolom pada layar kecil */
-     }
-}
 
 /* max-width */
 @media screen and (max-width: 767px) {
@@ -748,6 +764,13 @@ img {
      }
 }
 
+/* Atur agar tidak ada kolom yang menjadi 1 */
+@media (max-width: 576px) {
+     .col-sm-6 {
+          flex: 0 0 auto;
+          width: 50%; /* Paksa minimal 2 kolom pada layar kecil */
+     }
+}
 /* For medium devices */
 @media screen and (min-width: 576px) {
      .nav__list {
