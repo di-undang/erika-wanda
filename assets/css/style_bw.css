@@ -558,7 +558,7 @@ img {
 #commentBox {
      max-height: 400px; /* Tinggi maksimal kotak */
      overflow-y: auto; /* Scroll vertikal */
-     padding: 1rem; /* Spasi dalam kotak */
+     padding: 5px; /* Spasi dalam kotak */
 }
 
 /* Scrollbar styling */
@@ -579,34 +579,46 @@ img {
 /* Card untuk setiap komentar */
 .comment-card {
      display: flex;
+     flex-direction: column; /* Vertikal agar komentar dan ucapan terpisah */
      align-items: flex-start;
      border: 1px solid #ddd;
      border-radius: 8px;
-     padding: 5px;
+     padding: 10px;
      background-color: #f9f9f9;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Kolom kiri (ikon pengguna) */
+/* Kolom kiri: Ikon pengguna */
+.comment-left {
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     align-items: center;
+     border-bottom: solid 1px #b4b4b4;
+}
+
+/* Ikon pengguna */
 .comment-icon {
-     flex: 0 0 50px;
+     flex: 0 0 50px; /* Ukuran tetap */
      display: flex;
      justify-content: center;
      align-items: center;
-     margin: 1rem;
+     margin-right: 10px; /* Spasi antara foto dan teks */
 }
 
 .comment-icon img {
-     width: 50px;
-     height: 50px;
+     width: 40px; /* Ukuran foto lebih kecil */
+     height: 40px;
      border-radius: 50%;
      background-color: #ccc;
      object-fit: cover;
 }
 
-/* Kolom kanan (teks komentar) */
+/* Kolom kanan: Teks komentar */
 .comment-content {
-     flex: 1;
+     display: flex;
+     flex-direction: column;
+     flex: 1; /* Kolom ini mengisi ruang yang tersisa */
 }
 
 .comment-content .name {
@@ -621,11 +633,20 @@ img {
      margin-top: 2px;
 }
 
-.comment-content .message {
+.comment-content .badge {
+     margin-left: 5px;
+}
+
+/* Kolom untuk ucapan (message) */
+.message-container {
+     margin-top: 1px; /* Spasi antara info dan ucapan */
+}
+
+.message {
      font-size: 0.95rem;
      color: #444;
-     margin-top: 0.1rem;
      line-height: 1.4;
+     padding: 5px 0;
 }
 /*=============== edn  card Comentar ===============*/
 

@@ -157,26 +157,33 @@ function DisplayComment(prmListData) {
      // looping data key
      prmListData.forEach((item) => {
           //${ prmListData[key].key }
-          listComment.innerHTML += `<div class="comment-card mt-2">
-                                    <!-- Kolom kiri: Ikon user -->
-                                    <div class="comment-icon"><img src="assets/img/user.png" alt="User Icon">
-                                    </div>
-
-                                    <!-- Kolom kanan: Konten komentar -->
-                                    <div class="comment-content">
-                                        <div class="name">${
-                                             item.UserName || "Unknown"
-                                        } | <span class="badge ${
+          listComment.innerHTML += `<div class="comment-card mt-2"> <!-- Kolom kiri: Ikon user (photo smaller) -->
+                                        <div class="comment-left">
+                                             <div class="comment-icon">
+                                                  <img src="assets/img/user.png" alt="User Icon" class="small-photo">
+                                             </div>
+                                             <div class="comment-content">
+                                                  <div class="name">${
+                                                       item.UserName ||
+                                                       "Unknown"
+                                                  } | <span class="badge ${
                item.Kehadiran === "Datang" ? "bg-success" : "bg-danger"
-          }">${item.Kehadiran}</span></div>
-                                        <div class="datetime">${formatDate(
-                                             item.TanggalSubmit
-                                        )}</div>
-                                        <div class="message">${
-                                             item.Ucapan || "No Comment"
-                                        }</div>
-                                    </div>
-                            </div>`;
+          }">${item.Kehadiran}</span>
+                                                  </div>
+                                                  <div class="datetime">
+                                                       ${formatDate(
+                                                            item.TanggalSubmit
+                                                       )}
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <!-- Kolom kanan: Ucapan (message) -->
+                                        <div class="message-container">
+                                             <div class="message">
+                                                ${item.Ucapan || "No Comment"}
+                                                  </div>
+                                        </div>
+                                    </div>`;
      });
 
      //      	"IDUcapan": "50601f59-e340-42af-96ff-3ae46763fd87",
@@ -185,18 +192,30 @@ function DisplayComment(prmListData) {
      // 		"Kehadiran": "ok",
      // 		"TanggalSubmit": "2025-01-11T10:38:18.000Z"
 
-     // <div class="comment-card">
-     //                                <!-- Kolom kiri: Ikon user -->
-     //                                <div class="comment-icon">
-     //                                    <img src="assets/img/user.png" alt="User Icon">
-     //                                </div>
-     //                                <!-- Kolom kanan: Konten komentar -->
-     //                                <div class="comment-content">
-     //                                    <div class="name">Adon | <span class="badge bg-primary">Datang</span></div>
-     //                                    <div class="datetime">10 jam lalu</div>
-     //                                    <div class="message">mantap</div>
-     //                                </div>
-     //                            </div>
+     //     <div class="comment-card">
+     //     <!-- Kolom kiri: Ikon user (photo smaller) -->
+     //     <div class="comment-left">
+     //         <div class="comment-icon">
+     //             <img src="assets/img/user.png" alt="User Icon" class="small-photo">
+     //         </div>
+     //         <div class="comment-content">
+     //             <div class="name">USER 12 <span class="badge bg-success"">
+     //                     hadir
+     //                 </span>
+     //             </div>
+     //             <div class="datetime">
+     //                 ${formatDate(item.TanggalSubmit)}
+     //             </div>
+     //         </div>
+     //     </div>
+
+     //     <!-- Kolom kanan: Ucapan (message) -->
+     //     <div class="message-container">
+     //         <div class="message">
+     //             Tanpa mengurangi rasa hormat,
+     //           </div>
+     //     </div>
+     // </div>
 }
 
 function formatDate(dateString) {
